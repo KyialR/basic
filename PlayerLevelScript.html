@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ark Raiders 2.0 - Player Level Script - By Kyial</title>
+<meta name="author" content="Kyial Ram">
+<meta name="keywords" content="Ark Raiders 2.0, Player Level Script">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function createlevels (MaxLevel){
+var MaxLevel;
+var text='LevelExperienceRampOverrides=(';
+var i;
+var exp=5;
+
+for (i=0;i<MaxLevel;i++){
+text+='ExperiencePointsForLevel['+i+']'+'='+exp+',';
+exp+=10;
+}
+text = text.slice(0, -1)
+text+=')';
+levels.playerlevelsini.value=text;
+exp-=10;
+levels.playerexpover.value='OverrideMaxExperiencePointsPlayer='+exp;
+levels.dinoexpover.value='OverrideMaxExperiencePointsDino='+exp;
+
+}
+
+</script>
+</head>
+
+<body>
+
+<form name=levels>
+<h3>Ark Raiders 2.0</h3>
+<p>Theis script will help you set maxplayer and dino levels </p>
+ <ol>
+	<li>Enter the total number of levels of a Player</li>
+	<li>Enter the total number of levels of a Dino</li>
+	<li>Click on Create Levels and copy this code to your game.ini</li>
+	<li>To set levels for your dino. Enter a new total number of levels</li>
+	<li>Click on Create Levels and copy this code to your game.ini</li>
+	<li>Both player and dino Overramp code look the same, just paste in players first</li>
+ <ol>
+
+<h2>Enter the total Number of Levels</h2>
+<input type=number name=playerlevel>
+
+<h2>Click this button to create all the code for Player (Place in Game.ini)</h2>
+<input type=button name=create-levels value=Create-Levels-For-Player onclick="createlevels(playerlevel.value)">
+
+<input type=text name=playerlevelsini size=100 style="font-size:8pt">
+<h2>Max experience Override Player (Copy and Paste to Game.ini)</h2>
+<input type=text name=playerexpover size=40 > 
+
+<h2>Max experience Override(Copy and Paste to Game.ini)</h2>
+<input type=text name=dinoexpover size=40 > 
+</form>
+</body>
+
+</html>
