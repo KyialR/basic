@@ -1,0 +1,30 @@
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Float Clearfix */
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+textarea {
+  width: 600px;
+  height: 150px;  
+}
+
+body h3 {
+text-align :center;
+background-color : rgb(233, 200, 210);
+}
+
+h4{
+display : inline-block;
+margin-left: 10px;
+}
+
+.results{
+margin-right: 100px;
+}
