@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ark Raiders 2.0 - Prevent Dinos Script - By Kyial</title>
+<meta name="author" content="Kyial Ram">
+<meta name="keywords" content="Ark Raiders 2.0, Prevent Dinos Script">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+
+function checkedbox(){
+var copy;
+var gameini = [];
+var getbox = document.querySelectorAll('input[type=checkbox]:checked');
+for (var i = 0; i < getbox.length; i++) {
+	gameini.push('NPCReplacements=(FromClassName="' +getbox[i].value +'",ToClassName="")\n');		
+}
+copy=gameini.join("").toString();
+intro.code.value= copy;
+
+}
+</script>
+</head>
+<body>
+<form name=intro>
+
+<h3>Ark Raiders 2.0</h3>
+<p>Theis script will help you disable certain Dinos from spawning </p>
+ <ol>
+	<li>Check all the Box's for the dinos that you dont want on your server</li>
+	<li>Click on create-ini-list button</li>
+	<li>Copy and paste the code into you game.ini file</li>
+	<ol>
+
+
+<input type=button name=calc value=Create-ini-list onclick="checkedbox()">
+<h3>Copy the following code into game.ini</h3>
+
+<textarea type=text name=code size=200 rows=10 ></textarea>
+<input type="reset" name=Clear-Code-Area/>
+
+</form>
+ <div class="row">
+  <div class="column">
+  	<h5>Ankylosaurus</h5><input type=checkbox name=Ankylosaurus value=Ankylo_Character_BP_C>
+	<h5>Argentavis</h5><input type=checkbox name=Argentavis value=Argent_Character_BP_C>
+	<h5>Beelzebufo</h5><input type=checkbox name=Beelzebufo value=Toad_Character_BP_C>
+	<h5>Brontosaurus</h5><input type=checkbox name=Brontosaurus value=Sauropod_Character_BP_C>
+	<h5>Carbonemys</h5><input type=checkbox name=Carbonemys value=Turtle_Character_BP_C>
+	<h5>Carnotaurus</h5><input type=checkbox name=Carnotaurus value=Carno_Character_BP_C>
+	<h5>Dilophosaur</h5><input type=checkbox name=Dilophosaur value=Dilo_Character_BP_C>
+	<h5>Dimorphodon</h5><input type=checkbox name=Dimorphodon value=Dimorph_Character_BP_C>
+	<h5>Direwolf</h5><input type=checkbox name=Direwolf value=Direwolf_Character_BP_C>
+	<h5>Dodo</h5><input type=checkbox name=Dodo value=Dodo_Character_BP_C>
+	<h5>Gigantopithecus</h5><input type=checkbox name=Gigantopithecus value=Bigfoot_Character_BP_C>
+	<h5>Mammoth</h5><input type=checkbox name=Mammoth value=Mammoth_Character_BP_C>
+	<h5>Megaloceros</h5><input type=checkbox name=Megaloceros value=Stag_Character_BP_C>
+	<h5>Pachy</h5><input type=checkbox name=Pachy value=Pachy_Character_BP_C>
+	<h5>Paracer</h5><input type=checkbox name=Paracer value=Paracer_Character_BP_C>
+	<h5>Parasaur</h5><input type=checkbox name=Parasaur value=Para_Character_BP_C>
+	<h5>Phiomia</h5><input type=checkbox name=Phiomia value=Phiomia_Character_BP_C>
+	<h5>Plesiosaur</h5><input type=checkbox name=Plesiosaur value=Plesiosaur_Character_BP_C>
+	<h5>Pteranodon</h5><input type=checkbox name=Pteranodon value=Ptero_Character_BP_C>
+	<h5>Quetzalcoatlus</h5><input type=checkbox name=Quetzalcoatlus value=Quetz_Character_BP_C>
+	<h5>Rex</h5><input type=checkbox name=Rex value=Rex_Character_BP_C>
+	<h5>Sabertooth</h5><input type=checkbox name=Sabertooth value=Saber_Character_BP_C> 
+	<h5>Giantbee</h5><input type=checkbox name=Giantbee value=Bee_Queen_Character_BP_C>
+	<h5>Giganotosaurus</h5><input type=checkbox name=Giganotosaurus value=Gigant_Character_BP_C>
+	<h5>Griffin</h5><input type=checkbox name=Griffin value=Griffin_Character_BP_C>
+	<h5>Hesperornis</h5><input type=checkbox name=Hesperornis value=Hesperornis_Character_BP_C>
+	<h5>Hyaenodon</h5><input type=checkbox name=Hyaenodon value=Hyaenodon_Character_BP_C>
+	<h5>Iguanodon</h5><input type=checkbox name=Iguanodon value=Iguanodon_Character_BP_C>
+	<h5>Jerboa</h5><input type=checkbox name=Jerboa value=Jerboa_Character_BP_C>
+	<h5>Compy</h5><input type=checkbox name=Compy value=Compy_Character_BP_C>
+	<h5>Dungbeetle</h5><input type=checkbox name=Dungbeetle value=DungBeetle_Character_BP_C>
+	<h5>Chalicotherium</h5><input type=checkbox name=Chalicotherium value=Chalico_Character_BP_C>	
+  
+  </div>
+  <div class="column">
+  
+  <h5>Sarco</h5><input type=checkbox name=Sarco value=Sarco_Character_BP_C>
+	<h5>Scorpion</h5><input type=checkbox name=Scorpion value=Scorpion_Character_BP_C>
+	<h5>Spinosaur</h5><input type=checkbox name=Spinosaur value=Spino_Character_BP_C>
+	<h5>Stegosaurus</h5><input type=checkbox name=Stegosaurus value=Stego_Character_BP_C>
+	<h5>Triceratops</h5><input type=checkbox name=Triceratops value=Trike_Character_BP_C>
+	<h5>Phoenix</h5><input type=checkbox name=Phoenix value=Phoenix_Character_BP_C>
+	<h5>Firewyvern</h5><input type=checkbox name=Firewyvern value=Wyvern_Character_BP_Fire_C>
+	<h5>Icewyvern</h5><input type=checkbox name=Icewyvern value=Ragnarok_Wyvern_Override_Ice_C>
+	<h5>Lightningwyvern</h5><input type=checkbox name=Icewyvern value=Wyvern_Character_BP_Lightning_C>
+	<h5>Poisonwyvern</h5><input type=checkbox name=Poisonwyvern value=Wyvern_Character_BP_Poison_C>
+	<h5>AlphaFirewyvern</h5><input type=checkbox name=AlphaFirewyvern value=MegaWyvern_Character_BP_Fire_C>
+	<h5>Angler</h5><input type=checkbox name=Angler value=Angler_Character_BP_C>
+	<h5>Basilosaurus</h5><input type=checkbox name=Basilosaurus value=Basilosaurus_Character_BP_C>
+	<h5>Ammonite</h5><input type=checkbox name=Ammonite value=Ammonite_Character_C>
+	<h5>Cnidaria</h5><input type=checkbox name=Cnidaria value=Cnidaria_Character_BP_C>
+	<h5>Coelacanth</h5><input type=checkbox name=Coelacanth value=Coel_Character_BP_C>
+	<h5>Diplocaulus</h5><input type=checkbox name=Diplocaulus value=Diplocaulus_Character_BP_C>
+	<h5>Dunkleosteus</h5><input type=checkbox name=Dunkleosteus value=Dunkle_Character_BP_C>
+	<h5>Electrophorus</h5><input type=checkbox name=Electrophorus value=Eel_Character_BP_C>
+	<h5>Ichthyosaurus</h5><input type=checkbox name=Ichthyosaurus value=Dolphin_Character_BP_C>
+	<h5>Leedsichthys</h5><input type=checkbox name=Leedsichthys value=Leedsichthys_Character_BP_C>
+	<h5>Liopleurodon</h5><input type=checkbox name=Liopleurodon value=Liopleurodon_Character_BP_C>
+	<h5>Manta</h5><input type=checkbox name=Manta value=Manta_Character_BP_C>
+	<h5>Mosasaurus</h5><input type=checkbox name=Mosasaurus value=Mosa_Character_BP_C>
+	<h5>Piranha</h5><input type=checkbox name=Piranha value=Piranha_Character_BP_C>
+	<h5>Sabertoothsalmon</h5><input type=checkbox name=Sabertoothsalmon value=Salmon_Character_BP_C>
+	<h5>Trilobite</h5><input type=checkbox name=trilobite value=Trilobite_Character_C>
+	<h5>Tusoteuthis</h5><input type=checkbox name=Tusoteuthis value=Tusoteuthis_Character_BP_C>
+	<h5>Aachatina</h5><input type=checkbox name=Achatina value=Achatina_Character_BP_C>
+	<h5>Allosaurus</h5><input type=checkbox name=Allosaurus value=Allo_Character_BP_C>
+	<h5>Arthropluera</h5><input type=checkbox name=Arthropluera value=Arthro_Character_BP_C>
+	
+	
+
+
+  
+  
+  </div>
+  <div class="column">
+  
+  <h5>Kairuku</h5><input type=checkbox name=Kairuku value=Kairuku_Character_BP_C>
+	<h5>Kaprosuchus</h5><input type=checkbox name=Kaprosuchus value=Kaprosuchus_Character_BP_C>
+	<h5>Kentrosaurus</h5><input type=checkbox name=Kentrosaurus value=Kentro_Character_BP_C>
+	<h5>Lystrosaurus</h5><input type=checkbox name=Lystrosaurus value=Lystro_Character_BP_C>
+	<h5>Mantis</h5><input type=checkbox name=Mantis value=Mantis_Character_BP_C>
+	<h5>Megalania</h5><input type=checkbox name=Megalania value=Megalania_Character_BP_C>
+	<h5>Megalosaurus</h5><input type=checkbox name=Megalosaurus value=Megalosaurus_Character_BP_C>
+	<h5>Mesopithecus</h5><input type=checkbox name=Mesopithecus value=Monkey_Character_BP_C>
+	<h5>Microraptor</h5><input type=checkbox name=Microraptor value=Microraptor_Character_BP_C>
+	<h5>Otter</h5><input type=checkbox name=Otter value=Otter_Character_BP_C>
+	<h5>Ovis</h5><input type=checkbox name=Ovis value=Sheep_Character_BP_C>
+	<h5>Rockelemental</h5><input type=checkbox name=Rockelemental value=RockGolem_Character_BP_C>
+	<h5>Terrorbird</h5><input type=checkbox name=Terrorbird value=TerrorBird_Character_BP_C>
+	<h5>Thornydragon</h5><input type=checkbox name=Thornydragon value=SpineyLizard_Character_BP_C>
+	<h5>Thylacoleo</h5><input type=checkbox name=Thylacoleo value=Thylacoleo_Character_BP_C>
+	<h5>Titanoboa</h5><input type=checkbox name=Titanoboa value=BoaFrill_Character_BP_C>
+	<h5>Titanosaur</h5><input type=checkbox name=Titanosaur value=Titanosaur_Character_BP_C>
+	<h5>Basilisk</h5><input type=checkbox name=Basilisk value=Basilisk_Character_BP_C>
+	<h5>Bulbdog</h5><input type=checkbox name=Bulbdog value=LanternPug_Character_BP_C>
+	<h5>Featherlight</h5><input type=checkbox name=Featherlight value=LanternBird_Character_BP_C>
+	<h5>Glowbug</h5><input type=checkbox name=Glowbug value=Lightbug_Character_BaseBP_C>
+	<h5>Glowtail</h5><input type=checkbox name=Glowtail value=LanternLizard_Character_BP_C>
+	<h5>Karkinos</h5><input type=checkbox name=Karkinos value=Crab_Character_BP_C>
+	<h5>Nameless</h5><input type=checkbox name=Nameless value=Chupacabra_Character_BP_C>
+	<h5>Ravager</h5><input type=checkbox name=Ravager value=CaveWolf_Character_BP_C>
+	<h5>ReaperKing</h5><input type=checkbox name=Reaper value=Xenomorph_Character_BP_Male_C>
+	<h5>Rockdrake</h5><input type=checkbox name=Rockdrake value=RockDrake_Character_BP_C>
+	<h5>Rollrat</h5><input type=checkbox name=Rollrat value=MoleRat_Character_BP_C>
+	<h5>Seeker</h5><input type=checkbox name=Seeker value=Pteroteuthis_Char_BP_C>
+	<h5>Baryonyx</h5><input type=checkbox name=Baryonyx value=Baryonyx_Character_BP_C>
+	<h5>Castoroides</h5><input type=checkbox name=Castoroides value=Beaver_Character_BP_C>
+  
+  </div>
+</div> 
+
+</body>
+</html>
