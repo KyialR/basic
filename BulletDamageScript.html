@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ark Raiders 2.0 - Bullet Damage Script - By Kyial</title>
+<meta name="author" content="Kyial Ram">
+<meta name="keywords" content="Ark Raiders 2.0, Bullet Damage Script">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+
+function calcDamage(armour,multiplier,DinoHP){
+
+var armour,damageMulti,turrentdamage,DinoHP;
+armour= 100/(100+(4*armour));
+damageMulti=77*multiplier;
+turrentdamage=armour*damageMulti;
+
+calc.Damage.value=turrentdamage;
+calc.Tanked.value=DinoHP/turrentdamage;
+calc.MateBoosted.value=(DinoHP/turrentdamage)*0.67;
+calc.yuty.value=(DinoHP/turrentdamage)*0.8;
+calc.mateyuty.value=(DinoHP/turrentdamage)*0.8*0.67;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h3>Ark Raiders 2.0</h3>
+<p>Theis script will help you set the turrent damage on your server. </p>
+ <ol>
+	<li>Enter the Saddle Armour value of the dino</li>
+	<li>Enter the dino damage multiplyer value</li>
+	<li>Enter Dinos max Health</li>
+	<li>Click on the calculate button</li>
+ <ol>
+ 
+
+<form name=calc>
+
+<h5>Enter the Armour Value of Saddle</h5>
+<input type=number name=armour>
+
+<h5>Enter the Turret Dino Damage Multiplier</h5>
+<input type=number step="1" name=multiplier>
+
+<h5>Enter the Dinos HP</h5>
+<input type=number name=DinoHP>
+
+
+<h5>Calculate Damage per bullet</h5>
+<input type=button name=calculate value=Calculate onclick="calcDamage(armour.value,multiplier.value,DinoHP.value)">
+
+<div class=results>
+<h1>Results</h1>
+
+<h4>Damage per bullet :</h4>
+<input type=number name=Damage id=damage>
+
+<h4>Number of Bullets Dino can Tank :</h4>
+<input type=number name=Tanked>
+
+<h4>MateBoosted</h4>
+<input type=number name=MateBoosted>
+<h4>Yuty Buff</h4>
+<input type=number name=yuty>
+<h4>Yuty Buff + Mate Boost</h4>
+<input type=number name=mateyuty>
+
+</div>
+</form>
+</body>
+
+</html>
